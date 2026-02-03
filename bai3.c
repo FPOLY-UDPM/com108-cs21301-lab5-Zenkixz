@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [NGUYỄN HUỲNH ANH QUÂN]
+ * MSSV:      [PS48285]
+ * Lớp:       [CS21301]
  *****************************************************************************/
 
 //  BÀI 3: XÂY DỰNG HÀM HOÁN VỊ 
@@ -12,12 +12,24 @@
 
 #include <stdio.h>
 
-//Tạo hàm 
+//Tạo hàm hoán vị sử dụng con trỏ
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 int main() {
-
-    // //Gọi hàm trong hàm main 
-    
+    int x, y;
+    printf("Nhap gia tri x: ");
+    scanf("%d", &x);        
+    printf("Nhap gia tri y: ");
+    scanf("%d", &y);
+    //Gọi hàm hoán vị
+    swap(&x, &y);
+    printf("Gia tri sau khi hoan vi:\n");
+    printf("x = %d\n", x);
+    printf("y = %d\n", y);
     return 0;
 }
 
